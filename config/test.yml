@@ -1,0 +1,28 @@
+server:
+  port: 8111
+spring:
+  application:
+    name: spring-cloud-config-server
+  profiles:
+    active: subversion
+  cloud:
+    config:
+      enabled: true
+      server:
+        svn:
+          uri: http://10.2.5.128:18080/svn/IC/AspireCloud/CODE/main/aspirecloud-framework5/svntest/
+          username: dingliqiang 
+          password: a009047180800.
+          default-label: config
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: classpath:/shared
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+      
+foo: 1234
